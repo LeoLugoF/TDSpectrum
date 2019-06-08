@@ -18,6 +18,7 @@ from math import exp
 # Data is stored with name of the old file + ".txt".                    #
 # How the calculations are done can be consulted at the gaussian page:  #
 # https://gaussian.com/uvvisplot/                                       #
+# Note: Y values are in absorbance e(L mol-1 cm-1)                      #
 #                                                                       #
 # Command line:[python3] [*.py] [*.log/*.out] [Sigma] [MinWave] ...     #
 #              [MaxWave] [NONE/-s]                                      #
@@ -97,6 +98,8 @@ def ShowGraph():
     """Shows the plot,"""
     fig, ax = plt.subplots()
     ax.plot(Global.XValues,Global.YValues)
+    plt.xlabel("λ(nm)")
+    plt.ylabel("e(L mol-1 cm-1)")
     plt.show()
 
 def SaveFile():
