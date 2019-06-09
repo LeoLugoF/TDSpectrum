@@ -7,7 +7,7 @@ from math import exp
 
 #########################################################################
 #                              TDSpectrum                               #
-# Made by:      LeoLugoF                                                #                 
+# Made by:      Leonardo Israel Lugo Fuentes (LeoLugoF)                 #                 
 # Date:         30/May/2019                                             #
 # Requirements: Mathplotlib, numpy.                                     #
 #                                                                       #
