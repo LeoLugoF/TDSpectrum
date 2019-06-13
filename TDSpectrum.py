@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import sys
+import platform
 from math import exp
 
 #########################################################################
@@ -36,6 +37,10 @@ from math import exp
 # The first example will show only the UV-Vis plot.                     #
 # The second example will save only the data without showing the plot.  #
 #########################################################################
+
+OSplit = "\\"
+if platform.system() == "Linux":
+    OSplit = "/"
 
 class Global:
     """Global variables; Stores information."""
@@ -118,7 +123,7 @@ i = 0
 #Reads the extra comment arguments giving
 for arg in sys.argv:
     if ".out" in arg or ".log" in arg or ".OUT" in arg or ".LOG" in arg:
-        FilePath = os.getcwd() + "\\" + arg
+        FilePath = os.getcwd() + OSplit + arg
     elif "-s" in arg:
         Global.ShowPlot = False
     else:
